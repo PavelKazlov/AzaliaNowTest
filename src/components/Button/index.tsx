@@ -35,21 +35,23 @@ export const Button: React.FC<ButtonProps> = ({
       style={[
         {...styles.button},
         outlined && {...styles.outlinedButton},
-
         buttonStyle,
       ]}
       onPress={onPress}
       disabled={disabled}>
       {loading ? (
         <ActivityIndicator
-          color={outlined ? Colors.primary : Colors.primaryBackgroundColor}
+          color={
+            outlined
+              ? Colors.secondaryButtonBackground
+              : Colors.primaryButtonBackground
+          }
         />
       ) : (
         <Text
           style={[
             {...styles.text},
             outlined && {...styles.outlinedText},
-
             textStyle,
           ]}>
           {children}
