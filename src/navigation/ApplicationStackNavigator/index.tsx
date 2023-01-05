@@ -1,7 +1,7 @@
+import {Header} from '@/components'
 import {Screens} from '@/constants'
 import {TaskCreationScreen} from '@/screens/TaskCreationScreen'
 import {TasksListScreen} from '@/screens/TasksListScreen'
-
 import {
   createNativeStackNavigator,
   NativeStackNavigationOptions,
@@ -15,7 +15,7 @@ const stackNavigatorOptions: NativeStackNavigationOptions = {
   headerShadowVisible: false,
   headerBackVisible: true,
   headerBackTitleVisible: false,
-  // header: (props) => <Header {...props} />,
+  header: props => <Header {...props} />,
 }
 
 export const ApplicationStackNavigator = () => {

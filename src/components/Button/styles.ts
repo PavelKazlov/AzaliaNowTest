@@ -1,45 +1,37 @@
-import { Colors } from '@/constants'
-import { StyleSheet } from 'react-native'
-
+import {Colors} from '@/constants'
+import {StyleSheet} from 'react-native'
+const {
+  buttonShadow,
+  primaryButtonBackground,
+  secondaryButtonBackground,
+  buttonText,
+  error,
+} = Colors
 export const styles = StyleSheet.create({
   button: {
     width: '100%',
     alignItems: 'center',
-    backgroundColor: Colors.primary,
-    borderColor: Colors.primary,
-    borderWidth: 1,
-    borderRadius: 5,
+    backgroundColor: primaryButtonBackground,
+    borderRadius: 8,
     padding: 12,
-  },
-  disabledErrorButton: {
-    backgroundColor: Colors.disabledError,
-    borderColor: Colors.disabledError,
-  },
-  disabledButton: {
-    backgroundColor: Colors.disabledPrimary,
-    borderColor: Colors.disabledPrimary,
+    shadowColor: buttonShadow,
+    shadowRadius: 3,
+    shadowOpacity: 0.8,
+    shadowOffset: {width: 0, height: 0},
+    elevation: 5,
   },
   text: {
-    color: Colors.primaryBackgroundColor,
+    color: buttonText,
     fontSize: 16,
     lineHeight: 22,
     textTransform: 'capitalize',
   },
-  disabledText: {
-    color: Colors.primaryBackgroundColor,
-  },
 
   // outline styles
   outlinedButton: {
-    backgroundColor: Colors.primaryBackgroundColor,
+    backgroundColor: secondaryButtonBackground,
   },
   outlinedText: {
-    color: Colors.primary,
-  },
-  disabledOutlinedButton: {
-    backgroundColor: Colors.primaryBackgroundColor,
-  },
-  disabledOutlinedText: {
-    color: Colors.disabledPrimary,
+    color: buttonText,
   },
 })

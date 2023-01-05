@@ -8,7 +8,10 @@ import {styles} from './styles'
 export const TasksListScreen = () => {
   const navigation = useNavigation()
   const onAddTaskPressHandler = () =>
-    navigation.navigate(Screens.taskCreationScreen)
+    navigation.navigate(Screens.taskCreationScreen, {
+      headerTitle: 'Вернуться назад',
+    })
+
   return (
     <View style={styles.container}>
       <Text>Your Tasks List Coming soon...</Text>

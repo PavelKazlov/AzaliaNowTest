@@ -1,3 +1,5 @@
 export * from './colors'
 export * from './routes'
 export * from './tabBar'
+export * from './fonts'
+export * from './common'
