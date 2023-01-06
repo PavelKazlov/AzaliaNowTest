@@ -9,5 +9,8 @@ export const Colors = {
   primaryButtonBackground: '#222F3E',
   secondaryButtonBackground: '#222F3E80',
 
-  error: '#EB5757',
+  checkedText: 'rgba(34, 47, 62, 0.5)',
+
+  statusbarBackground: '#FFFFFF',
+  logo: '#FF003C',
 }

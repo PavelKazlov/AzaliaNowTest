@@ -5,7 +5,6 @@ const {
   primaryButtonBackground,
   secondaryButtonBackground,
   buttonText,
-  error,
 } = Colors
 export const styles = StyleSheet.create({
   button: {
