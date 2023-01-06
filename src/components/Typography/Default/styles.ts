@@ -1,4 +1,3 @@
-// import { Fonts } from '@/constants'
 import {Colors, Fonts} from '@/constants'
 import {StyleSheet} from 'react-native'
 
