@@ -7,11 +7,12 @@ import {styles} from './styles'
 const {primaryText} = Colors
 
 export const Default: React.FC<TextPropsTypes> = ({
+  isChecked = false,
   children,
   style,
   color,
   size = 24,
-  lineH = 28.13,
+  lineH = 28,
   textAlign = 'auto',
   ...rest
 }) => {
@@ -26,6 +27,7 @@ export const Default: React.FC<TextPropsTypes> = ({
           textAlign: textAlign,
         },
         style,
+        isChecked && styles.checkedTask,
       ]}
       {...rest}>
       {children}

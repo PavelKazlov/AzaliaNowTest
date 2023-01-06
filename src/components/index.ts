@@ -1,3 +1,6 @@
 export * from './Button'
+export * from './TaskCheckBox'
 export * from './Header'
+export * from './Logotype'
 export * from './Typography'
+export * from './TaskListItem'
