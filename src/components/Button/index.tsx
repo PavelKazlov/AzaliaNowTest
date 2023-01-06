@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   ViewStyle,
 } from 'react-native'
+import {Typography} from '../Typography'
 import {styles} from './styles'
 
 export type ButtonProps = {
@@ -18,7 +19,6 @@ export type ButtonProps = {
   outlined?: boolean
   buttonStyle?: StyleProp<ViewStyle>
   textStyle?: StyleProp<TextStyle>
-  loading?: boolean
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -28,35 +28,26 @@ export const Button: React.FC<ButtonProps> = ({
   buttonStyle,
   textStyle,
   disabled,
-  loading,
 }) => {
   return (
     <TouchableOpacity
       style={[
         {...styles.button},
         outlined && {...styles.outlinedButton},
+        disabled && {...styles.outlinedButton},
         buttonStyle,
       ]}
       onPress={onPress}
       disabled={disabled}>
-      {loading ? (
-        <ActivityIndicator
-          color={
-            outlined
-              ? Colors.secondaryButtonBackground
-              : Colors.primaryButtonBackground
-          }
-        />
-      ) : (
-        <Text
-          style={[
-            {...styles.text},
-            outlined && {...styles.outlinedText},
-            textStyle,
-          ]}>
-          {children}
-        </Text>
-      )}
+      <Typography.Default
+        color={Colors.buttonText}
+        style={[
+          // {...styles.text},
+          outlined && {...styles.outlinedText},
+          textStyle,
+        ]}>
+        {children}
+      </Typography.Default>
     </TouchableOpacity>
   )
 }

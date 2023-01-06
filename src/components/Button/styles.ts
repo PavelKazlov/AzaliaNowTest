@@ -1,11 +1,13 @@
 import {Colors} from '@/constants'
 import {StyleSheet} from 'react-native'
+
 const {
   buttonShadow,
   primaryButtonBackground,
   secondaryButtonBackground,
   buttonText,
 } = Colors
+
 export const styles = StyleSheet.create({
   button: {
     width: '100%',
