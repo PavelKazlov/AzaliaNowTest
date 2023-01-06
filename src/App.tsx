@@ -1,30 +1,32 @@
 import {NavigationContainer} from '@react-navigation/native'
 import React from 'react'
 import {SafeAreaProvider} from 'react-native-safe-area-context'
-import {StatusBar, StyleSheet} from 'react-native'
+import {SafeAreaView, StatusBar, StyleSheet} from 'react-native'
 import {ApplicationStackNavigator} from '@/navigation/ApplicationStackNavigator'
 import {Colors} from '@/constants'
 
-const {primaryBackground} = Colors
+const {statusbarBackground} = Colors
 
 const App = () => {
   return (
-    <SafeAreaProvider>
+    // <SafeAreaProvider>
+    <SafeAreaView style={styles.sectionContainer}>
       <StatusBar
         barStyle={'dark-content'}
-        backgroundColor={primaryBackground}
+        backgroundColor={statusbarBackground}
       />
       <NavigationContainer>
         <ApplicationStackNavigator />
       </NavigationContainer>
-    </SafeAreaProvider>
+    </SafeAreaView>
+    // </SafeAreaProvider>
   )
 }
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+    flex: 1,
+    // paddingHorizontal: 24,
   },
   sectionTitle: {
     fontSize: 24,

@@ -9,6 +9,7 @@ export type TextPropsTypes = {
   fontFamily?: StyleProp<string>
   fontWeight?: StyleProp<string>
   underline?: StyleProp<boolean>
+  isChecked?: boolean
   pa?: StyleProp<number>
   pv?: StyleProp<number>
   ph?: StyleProp<number>
