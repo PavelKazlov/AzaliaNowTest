@@ -1,5 +1,5 @@
 import {IconArrowLeft} from '@/assets'
-import {Colors, Screens} from '@/constants'
+import {Colors} from '@/constants'
 import {useNavigation} from '@react-navigation/native'
 import React from 'react'
 import {TouchableOpacity, View} from 'react-native'

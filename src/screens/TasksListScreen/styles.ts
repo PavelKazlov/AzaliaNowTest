@@ -11,4 +11,22 @@ export const styles = StyleSheet.create({
     backgroundColor: primaryBackground,
     alignItems: 'flex-start',
   },
+  logoContainer: {
+    width: '100%',
+    paddingTop: 85,
+    paddingBottom: 0,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+  },
+  listContainer: {
+    flex: 1,
+    width: '100%',
+  },
+  addButtonContainer: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    marginBottom: 25,
+    marginRight: 25,
+  },
 })

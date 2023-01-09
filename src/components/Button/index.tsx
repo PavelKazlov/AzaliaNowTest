@@ -1,10 +1,8 @@
 import {Colors} from '@/constants'
 import React, {ReactNode} from 'react'
 import {
-  ActivityIndicator,
   GestureResponderEvent,
   StyleProp,
-  Text,
   TextStyle,
   TouchableOpacity,
   ViewStyle,
@@ -16,7 +14,6 @@ export type ButtonProps = {
   children: ReactNode
   onPress?: (event: GestureResponderEvent) => void
   disabled?: boolean
-  outlined?: boolean
   buttonStyle?: StyleProp<ViewStyle>
   textStyle?: StyleProp<TextStyle>
 }
@@ -24,7 +21,6 @@ export type ButtonProps = {
 export const Button: React.FC<ButtonProps> = ({
   children,
   onPress,
-  outlined,
   buttonStyle,
   textStyle,
   disabled,
@@ -33,19 +29,12 @@ export const Button: React.FC<ButtonProps> = ({
     <TouchableOpacity
       style={[
         {...styles.button},
-        outlined && {...styles.outlinedButton},
-        disabled && {...styles.outlinedButton},
+        disabled && {...styles.disabledButton},
         buttonStyle,
       ]}
       onPress={onPress}
       disabled={disabled}>
-      <Typography.Default
-        color={Colors.buttonText}
-        style={[
-          // {...styles.text},
-          outlined && {...styles.outlinedText},
-          textStyle,
-        ]}>
+      <Typography.Default color={Colors.buttonText} style={textStyle}>
         {children}
       </Typography.Default>
     </TouchableOpacity>

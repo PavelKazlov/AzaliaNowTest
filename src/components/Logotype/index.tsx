@@ -1,16 +1,7 @@
 import {Logo} from '@/assets'
 import {Colors} from '@/constants'
-import React, {ReactNode} from 'react'
-import {
-  ActivityIndicator,
-  GestureResponderEvent,
-  StyleProp,
-  Text,
-  TextStyle,
-  TouchableOpacity,
-  View,
-  ViewStyle,
-} from 'react-native'
+import React from 'react'
+import {View} from 'react-native'
 import {Typography} from '../Typography'
 import {styles} from './styles'
 
