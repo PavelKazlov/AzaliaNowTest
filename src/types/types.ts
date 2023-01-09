@@ -1,8 +1,14 @@
-interface TasksStateArray {
+interface ITasksStateArray {
   tasksArray: Array<{id: string; task: string}>
 }
 
-interface TasksStateItem {
+interface ITasksStateItem {
   id: string
   task: string
+}
+interface ITaskListItemProps {
+  id: string
+  taskId: string
+  description: string
+  activeTasksArray: Array<ITasksStateItem>
 }
