@@ -1,6 +1,6 @@
+import 'react-native-gesture-handler'
 import {NavigationContainer} from '@react-navigation/native'
 import React from 'react'
-import {SafeAreaProvider} from 'react-native-safe-area-context'
 import {SafeAreaView, StatusBar, StyleSheet} from 'react-native'
 import {ApplicationStackNavigator} from '@/navigation/ApplicationStackNavigator'
 import {Colors} from '@/constants'
@@ -12,7 +12,6 @@ const {statusbarBackground} = Colors
 
 const App = () => {
   return (
-    // <SafeAreaProvider>
     <Provider store={store}>
       <PersistGate persistor={persistor} loading={null}>
         <SafeAreaView style={styles.sectionContainer}>
@@ -26,7 +25,6 @@ const App = () => {
         </SafeAreaView>
       </PersistGate>
     </Provider>
-    // </SafeAreaProvider>
   )
 }
 
