@@ -1,5 +1,5 @@
-import React, {createRef, useEffect, useState} from 'react'
-import {KeyboardAvoidingView, Text, View} from 'react-native'
+import React, {createRef, useState} from 'react'
+import {KeyboardAvoidingView, View} from 'react-native'
 import {styles} from './styles'
 import {Input} from '@rneui/themed'
 import {Colors, Common} from '@/constants'
@@ -8,12 +8,14 @@ import uuid from 'react-native-uuid'
 import {useDispatch, useSelector} from 'react-redux'
 import {updateTasksArray} from '@/slices'
 import {selectTasksArray} from '@/selectors'
+import {useNavigation} from '@react-navigation/native'
 
 export const TaskCreationScreen = () => {
   const activeTasksArray = useSelector(selectTasksArray)
   const [inputValue, setInputValue] = useState('')
   const input = createRef()
   const dispatch = useDispatch()
+  const navigation = useNavigation()
 
   const createFilteredArray = (arr: ITasksStateItem) => {
     let newFilteredArray = [...activeTasksArray]
@@ -33,7 +35,7 @@ export const TaskCreationScreen = () => {
   return (
     <View style={styles.container}>
       <KeyboardAvoidingView
-        style={{width: '100%'}}
+        style={styles.keyboardContainer}
         behavior={Common.ios ? 'position' : 'null'}
         keyboardVerticalOffset={Common.ios ? 200 : 0}>
         <Input

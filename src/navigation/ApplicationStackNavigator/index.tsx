@@ -1,5 +1,6 @@
 import {Header} from '@/components'
 import {Screens} from '@/constants'
+import {SplashScreen} from '@/screens/SplashScreen'
 import {TaskCreationScreen} from '@/screens/TaskCreationScreen'
 import {TasksListScreen} from '@/screens/TasksListScreen'
 import {
@@ -21,6 +22,11 @@ const stackNavigatorOptions: NativeStackNavigationOptions = {
 export const ApplicationStackNavigator = () => {
   return (
     <Stack.Navigator screenOptions={stackNavigatorOptions}>
+      <Stack.Screen
+        name={Screens.splashScreen}
+        options={{headerShown: false}}
+        component={SplashScreen}
+      />
       <Stack.Screen
         name={Screens.tasksListScreen}
         options={{headerShown: false}}
