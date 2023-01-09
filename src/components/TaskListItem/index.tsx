@@ -4,7 +4,6 @@ import {View, Animated} from 'react-native'
 import {TaskCheckBox} from '../TaskCheckBox'
 import {Typography} from '../Typography'
 import {styles} from './styles'
-
 import {GestureHandlerRootView} from 'react-native-gesture-handler'
 import Swipeable from 'react-native-gesture-handler/Swipeable'
 import {useDispatch} from 'react-redux'
@@ -15,11 +14,7 @@ const Basket = (options: any) => {
   const isLeftDirection = options?.leftDirection
   const scale = options?.scale
   return (
-    <Animated.View
-      style={{
-        width: '100%',
-        justifyContent: 'center',
-      }}>
+    <Animated.View style={styles.animatedContainer}>
       <Animated.View
         style={{
           marginLeft: isLeftDirection ? 20 : 'auto',
@@ -37,7 +32,7 @@ export const TaskListItem = ({...props}: ITaskListItemProps) => {
   const [checked, setChecked] = useState(false)
   const {taskId, description, activeTasksArray} = props
 
-  const swipeRight = (progress, dragX) => {
+  const swipeRight = (_: any, dragX: any) => {
     const scale = dragX.interpolate({
       inputRange: [-100, 0],
       outputRange: [1.4, 0.5],
@@ -46,7 +41,7 @@ export const TaskListItem = ({...props}: ITaskListItemProps) => {
     return <Basket scale={scale} />
   }
 
-  const swipeLeft = (progress, dragX) => {
+  const swipeLeft = (_: any, dragX: any) => {
     const scale = dragX.interpolate({
       inputRange: [0, 100],
       outputRange: [0.5, 1.4],
@@ -78,7 +73,7 @@ export const TaskListItem = ({...props}: ITaskListItemProps) => {
         <Animated.View style={styles.container}>
           <TaskCheckBox checked={checked} onPress={setChecked} />
 
-          <View style={{flex: 1, marginLeft: 10}}>
+          <View style={styles.description}>
             <Typography.Default
               onPress={() => setChecked(!checked)}
               isChecked={checked}>

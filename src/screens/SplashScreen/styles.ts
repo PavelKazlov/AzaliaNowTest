@@ -7,12 +7,15 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 24,
-    paddingBottom: Common.ios ? 6 : 10,
     backgroundColor: primaryBackground,
-    alignItems: 'center',
+    alignItems: 'flex-start',
     justifyContent: 'center',
   },
-  keyboardContainer: {
+  logoContainer: {
+    width: '100%',
+  },
+  spinnerContainer: {
+    marginTop: 20,
     width: '100%',
   },
 })

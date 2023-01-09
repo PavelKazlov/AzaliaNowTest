@@ -14,9 +14,7 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     borderColor: Common.ios ? primaryBackground : buttonShadow,
     backgroundColor: primaryBackground,
-    // paddingVertical: 15,
     borderWidth: 2,
-    // paddingHorizontal: 2,
     borderRadius: 8,
     shadowColor: buttonShadow,
     shadowRadius: 2,
@@ -24,12 +22,12 @@ export const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 0},
     elevation: 5,
   },
-
-  title: {
-    // fontFamily: Fonts.openSansBold,
-    fontWeight: Common.ios ? '700' : 'normal',
-    fontSize: 16,
-    lineHeight: 21.79,
-    paddingRight: 10,
+  description: {
+    flex: 1,
+    marginLeft: 10,
+  },
+  animatedContainer: {
+    width: '100%',
+    justifyContent: 'center',
   },
 })

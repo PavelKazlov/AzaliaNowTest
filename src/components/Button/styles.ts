@@ -21,18 +21,7 @@ export const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 0},
     elevation: 5,
   },
-  text: {
-    color: buttonText,
-    fontSize: 16,
-    lineHeight: 22,
-    textTransform: 'capitalize',
-  },
-
-  // outline styles
-  outlinedButton: {
+  disabledButton: {
     backgroundColor: secondaryButtonBackground,
-  },
-  outlinedText: {
-    color: buttonText,
   },
 })

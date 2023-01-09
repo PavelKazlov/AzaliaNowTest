@@ -19,22 +19,12 @@ export const TasksListScreen = () => {
 
   return (
     <View style={styles.container}>
-      <View
-        style={{
-          width: '100%',
-          paddingTop: 85,
-          paddingBottom: 0,
-          flexDirection: 'row',
-          justifyContent: 'flex-start',
-        }}>
+      <View style={styles.logoContainer}>
         <Logotype />
       </View>
       {activeTasksArray.length > 0 ? (
         <FlatList
-          style={{
-            flex: 1,
-            width: '100%',
-          }}
+          style={styles.listContainer}
           showsVerticalScrollIndicator={false}
           data={activeTasksArray}
           keyExtractor={item => item.id}
@@ -49,19 +39,8 @@ export const TasksListScreen = () => {
         />
       ) : null}
 
-      <View
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          right: 0,
-          marginBottom: 25,
-          marginRight: 25,
-        }}>
-        <TouchableOpacity
-          onPress={onAddTaskPressHandler}
-          style={{
-            alignItems: 'flex-end',
-          }}>
+      <View style={styles.addButtonContainer}>
+        <TouchableOpacity onPress={onAddTaskPressHandler}>
           <AddNewTask fill={Colors.primaryButtonBackground} />
         </TouchableOpacity>
       </View>
