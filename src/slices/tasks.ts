@@ -1,7 +1,7 @@
 import {Slices} from '@/constants'
 import {createSlice} from '@reduxjs/toolkit'
 
-const initialState: TasksStateArray = {
+const initialState: ITasksStateArray = {
   tasksArray: [],
 }
 
@@ -15,16 +15,10 @@ const taskSlice = createSlice({
         tasksArray: action.payload,
       }
     },
-    clearTasksArray: state => {
-      return {
-        ...state,
-        tasksArray: [],
-      }
-    },
   },
 })
 
 export const {
-  actions: {updateTasksArray, clearTasksArray},
+  actions: {updateTasksArray},
   reducer: taskReducer,
 } = taskSlice
