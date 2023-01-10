@@ -1,7 +1,7 @@
 # AzaliaNowTest
 
 
-## Link to download app-release.apk: 
+## Link to download Android application app-release.apk: 
   https://drive.google.com/file/d/1GNRG8V3UZRjyvY8sNsFEk0x4JET4tQgL/view?usp=share_link
 
 
